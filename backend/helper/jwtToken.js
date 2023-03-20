@@ -8,5 +8,6 @@ exports.generateToken = (id, req, res) => {
   }
 
   res.header("key", token).status(200);
+  return token;
   // res.send("user token created");
 };

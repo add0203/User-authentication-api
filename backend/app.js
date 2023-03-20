@@ -1,7 +1,7 @@
 const express = require("express");
 const userRoutes = require("./routes/userRoute");
 const bodyparser = require("body-parser");
-
+require("dotenv").config();
 const mongoose = require("mongoose");
 
 const app = express();
@@ -14,12 +14,12 @@ app.use(express.json());
 //routes
 
 app.use("/user", userRoutes);
-app.use("/api/user", userRoutes);
+// app.use("/api/user", userRoutes);
 
 //DB
 mongoose.set("strictQuery", true);
 mongoose
-  .connect("mongodb://127.0.0.1:27017", {
+  .connect(process.env.DB_LINK, {
     // useNewUrlParser: true,
     useUnifiedTopology: true,
     dbName: "projectX",
@@ -32,8 +32,7 @@ mongoose
   });
 
 //server
-PORT = 3002;
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT, () => {
   console.log(`server is running at http://localhost:${PORT}`);
 });
