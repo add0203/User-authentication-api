@@ -78,22 +78,9 @@ The following routes are defined for user authentication and management:
 
 These routes are configured using Express middleware. The main application uses `app.use("/user", userRoutes)` to direct requests to the `userRoutes` router middleware. Therefore, the paths specified for each route inside `userRoutes` do not need to include the `/user` prefix, as it's already handled by the parent middleware.
 
-For example:
-```javascript
-// Configure Express to use the userRoutes middleware for routes starting with "/user"
-app.use("/user", userRoutes);
-
-// Define routes inside userRoutes without the "/user" prefix
-userRoutes.route("/register").post(register);
-userRoutes.route("/signIn").post(signIn);
-userRoutes.route("/genOtp").post(forgetPass);
-// ... and so on
-
-
 ### Contributing:
 
 Contributions are welcome! If you find any bugs or have suggestions for improvement, please open an issue or create a pull request.
-
 
 ### Author:
 
