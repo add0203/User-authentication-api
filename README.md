@@ -60,9 +60,35 @@ Sure, here's a one-line description for each of the dependencies listed:
 
 ### Usage:
 
-- Register a new user by navigating to `/register` and providing an email and password.
-- Log in with registered credentials by navigating to `/login`.
-- Secure routes can be created by using Passport.js middleware to authenticate users.
+## User Routes
+
+The following routes are defined for user authentication and management:
+
+- `/user/register`: **POST** - Register a new user.
+- `/user/signIn`: **POST** - Sign in existing user.
+- `/user/genOtp`: **POST** - Generate OTP (One-Time Password) for password reset.
+- `/user/resetPass`: **PUT** - Reset user password.
+- `/user/checkOtp`: **POST** - Check OTP validity.
+- `/user/deleteUser`: **DELETE** - Delete a user account.
+- `/user/`: **GET** - Get a list of all users.
+- `/user/:id`: **GET** - Get user details by ID.
+- `/user/updateUser`: **PATCH** - Update user details.
+
+### Usage:
+
+These routes are configured using Express middleware. The main application uses `app.use("/user", userRoutes)` to direct requests to the `userRoutes` router middleware. Therefore, the paths specified for each route inside `userRoutes` do not need to include the `/user` prefix, as it's already handled by the parent middleware.
+
+For example:
+```javascript
+// Configure Express to use the userRoutes middleware for routes starting with "/user"
+app.use("/user", userRoutes);
+
+// Define routes inside userRoutes without the "/user" prefix
+userRoutes.route("/register").post(register);
+userRoutes.route("/signIn").post(signIn);
+userRoutes.route("/genOtp").post(forgetPass);
+// ... and so on
+
 
 ### Contributing:
 
@@ -71,7 +97,8 @@ Contributions are welcome! If you find any bugs or have suggestions for improvem
 
 ### Author:
 
-[Your Name]
+ANAND DHAR DWIVEDI
+ananddhardwivedi05@gmail.com
 
 ### Acknowledgements:
 
