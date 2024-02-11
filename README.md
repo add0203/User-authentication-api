@@ -14,11 +14,18 @@ This repository contains a Node.js program for user authentication using various
 
 ### Technologies Used:
 
-- **Node.js**: A JavaScript runtime for executing JavaScript code server-side.
-- **Express.js**: A minimal and flexible Node.js web application framework used for building web applications and APIs.
-- **Passport.js**: An authentication middleware for Node.js, used for handling user authentication strategies.
-- **bcrypt.js**: A library for hashing and salting passwords to enhance security.
-- **MongoDB**: A NoSQL database used for storing user credentials securely.
+Sure, here's a one-line description for each of the dependencies listed:
+
+1. **bcryptjs**: Library for hashing passwords using bcrypt algorithm with asynchronous support.
+2. **body-parser**: Middleware for parsing incoming request bodies in Express.js.
+3. **crypto**: Node.js built-in module providing cryptographic functionalities.
+4. **email-validator**: Library for validating email addresses.
+5. **express**: Minimal and flexible Node.js web application framework.
+6. **express-async-handler**: Utility function for handling asynchronous errors in Express.js route handlers.
+7. **jsonwebtoken**: Library for generating and verifying JSON Web Tokens (JWT) for authentication.
+8. **mongoose**: MongoDB object modeling for Node.js.
+9. **nodemailer**: Module for sending emails with Node.js.
+10. **nodemon**: Utility that monitors for changes in your Node.js application and automatically restarts the server.
 
 ### Installation:
 
@@ -39,9 +46,10 @@ This repository contains a Node.js program for user authentication using various
    Create a `.env` file in the root directory of the project and add the following variables:
 
    ```plaintext
-   PORT=3000
-   MONGODB_URI=<your-mongodb-connection-string>
-   SESSION_SECRET=<your-session-secret>
+   JWT_SECRET = "group_project"
+   EMAIL_PASS = <Email password>
+   PORT = 3002
+   DB_LINK = "mongodb://127.0.0.1:27017"
    ```
 
 4. Start the server:
@@ -60,9 +68,6 @@ This repository contains a Node.js program for user authentication using various
 
 Contributions are welcome! If you find any bugs or have suggestions for improvement, please open an issue or create a pull request.
 
-### License:
-
-This project is licensed under the [MIT License](LICENSE).
 
 ### Author:
 
