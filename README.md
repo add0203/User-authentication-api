@@ -75,7 +75,15 @@ Contributions are welcome! If you find any bugs or have suggestions for improvem
 
 ### Acknowledgements:
 
-- [Passport.js Documentation](http://www.passportjs.org/docs/)
-- [bcrypt.js Documentation](https://github.com/dcodeIO/bcrypt.js/)
-- [Express.js Documentation](https://expressjs.com/)
-- [MongoDB Documentation](https://docs.mongodb.com/)
+Certainly, here are the links to the documentation for each of the dependencies:
+
+1. **bcryptjs**: [Documentation](https://www.npmjs.com/package/bcryptjs)
+2. **body-parser**: [Documentation](https://www.npmjs.com/package/body-parser)
+3. **crypto**: [Node.js Documentation](https://nodejs.org/api/crypto.html)
+4. **email-validator**: [Documentation](https://www.npmjs.com/package/email-validator)
+5. **express**: [Documentation](https://expressjs.com/en/4x/api.html)
+6. **express-async-handler**: [Documentation](https://www.npmjs.com/package/express-async-handler)
+7. **jsonwebtoken**: [Documentation](https://www.npmjs.com/package/jsonwebtoken)
+8. **mongoose**: [Documentation](https://mongoosejs.com/docs/index.html)
+9. **nodemailer**: [Documentation](https://nodemailer.com/about/)
+10. **nodemon**: [Documentation](https://nodemon.io/)
