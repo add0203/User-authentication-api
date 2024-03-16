@@ -14,7 +14,7 @@ This repository contains a Node.js program for user authentication using various
 
 ### Technologies Used:
 
-Sure, here's a one-line description for each of the dependencies listed:
+here's a one-line description for each of the dependencies listed:
 
 1. **bcryptjs**: Library for hashing passwords using bcrypt algorithm with asynchronous support.
 2. **body-parser**: Middleware for parsing incoming request bodies in Express.js.
